@@ -73,8 +73,10 @@ namespace LimitlessLED_Test
             Console.WriteLine("alloff: turn everything off (with the last settings).");
             Console.WriteLine("brighten: Increase the brightness one step (for the last group).");
             Console.WriteLine("dim: Decrease the brightness one step (for the last group).");
-            Console.WriteLine("fadedown: Slow fade group one to minimum.");
-            Console.WriteLine("fadeup: Slow fade group one to maximum.");
+            Console.WriteLine("fadedown: Slow fade all to minimum.");
+            Console.WriteLine("fadeup: Slow fade all to maximum.");
+            Console.WriteLine("fadedown1: Slow fade group one to minimum.");
+            Console.WriteLine("fadeup1: Slow fade group one to maximum.");
             Console.WriteLine("--------Fun stuff:--------");
             Console.WriteLine("wakeupcall: Turns on all lights to minimum brightness, then slowly increases the brightness over 10 min");
             Console.WriteLine("blink: blinks the lights really fast.");
