@@ -101,10 +101,52 @@ namespace LimitlessLED_Test
         }
 
         /// <summary>
-        /// Slow fade group one to minimum
+        /// Slow fade all groups to minimum
         /// this will probably be renamed later due to potential naming conflict
         /// </summary>
         public static void FadeDown()
+        {
+            Console.WriteLine("Dimming All Groups");
+
+            // Ensure all groups are on and selected by the wifi bridge
+            LedBridge(BridgeCommands.AllOn);
+            Thread.Sleep(150);
+
+            // Fade all groups down 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + i);
+                LedBridge(BridgeCommands.BrightnessDown);
+                Thread.Sleep(1000);
+            }
+        }
+
+        /// <summary>
+        /// Slow fade all groups to maximum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeUp()
+        {
+            Console.WriteLine("Brightening All Groups");
+
+            // Ensure all groups are on and selected by the wifi bridge
+            LedBridge(BridgeCommands.AllOn);
+            Thread.Sleep(150);
+
+            // Fade all groups up 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + (10 - i));
+                LedBridge(BridgeCommands.BrightnessUp);
+                Thread.Sleep(1000);
+            }
+        }
+        
+        /// <summary>
+        /// Slow fade group one to minimum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeDown1()
         {
             Console.WriteLine("Dimming Group One");
 
@@ -125,7 +167,7 @@ namespace LimitlessLED_Test
         /// Slow fade group one to maximum
         /// this will probably be renamed later due to potential naming conflict
         /// </summary>
-        public static void FadeUp()
+        public static void FadeUp1()
         {
              Console.WriteLine("Brightening Group One");
             
@@ -133,6 +175,132 @@ namespace LimitlessLED_Test
             LedBridge(BridgeCommands.Group1On);
             Thread.Sleep(150);
        
+            // Fade selected group up 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + (10 - i));
+                LedBridge(BridgeCommands.BrightnessUp);
+                Thread.Sleep(1000);
+            }
+        }
+        
+        /// <summary>
+        /// Slow fade group two to minimum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeDown2()
+        {
+            Console.WriteLine("Dimming Group Two");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group2On);
+            Thread.Sleep(150);
+
+            // Fade selected group down 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + i);
+                LedBridge(BridgeCommands.BrightnessDown);
+                Thread.Sleep(1000);
+            }
+        }
+
+        /// <summary>
+        /// Slow fade group two to maximum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeUp2()
+        {
+            Console.WriteLine("Brightening Group Two");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group2On);
+            Thread.Sleep(150);
+
+            // Fade selected group up 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + (10 - i));
+                LedBridge(BridgeCommands.BrightnessUp);
+                Thread.Sleep(1000);
+            }
+        }
+        
+        /// <summary>
+        /// Slow fade group three to minimum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeDown3()
+        {
+            Console.WriteLine("Dimming Group Three");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group3On);
+            Thread.Sleep(150);
+
+            // Fade selected group down 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + i);
+                LedBridge(BridgeCommands.BrightnessDown);
+                Thread.Sleep(1000);
+            }
+        }
+
+        /// <summary>
+        /// Slow fade group three to maximum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeUp3()
+        {
+            Console.WriteLine("Brightening Group Three");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group3On);
+            Thread.Sleep(150);
+
+            // Fade selected group up 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + (10 - i));
+                LedBridge(BridgeCommands.BrightnessUp);
+                Thread.Sleep(1000);
+            }
+        }
+        
+        /// <summary>
+        /// Slow fade group four to minimum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeDown4()
+        {
+            Console.WriteLine("Dimming Group Four");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group4On);
+            Thread.Sleep(150);
+
+            // Fade selected group down 10 steps  
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("This is dimming level " + i);
+                LedBridge(BridgeCommands.BrightnessDown);
+                Thread.Sleep(1000);
+            }
+        }
+
+        /// <summary>
+        /// Slow fade group four to maximum
+        /// this will probably be renamed later due to potential naming conflict
+        /// </summary>
+        public static void FadeUp4()
+        {
+            Console.WriteLine("Brightening Group Four");
+
+            // Ensure group one is on, and selected by the wifi bridge
+            LedBridge(BridgeCommands.Group4On);
+            Thread.Sleep(150);
+
             // Fade selected group up 10 steps  
             for (int i = 1; i < 10; i++)
             {
